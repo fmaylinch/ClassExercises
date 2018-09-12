@@ -8,9 +8,8 @@ public class Main {
         Car audi = new Car("Audi A8");
 
         ferrari.accelerate(100);
-        ferrari.accelerate(100);
-        ferrari.accelerate(99);
-        ferrari.accelerate(50);
+        ferrari.decelerate(40);
+        ferrari.decelerate(80);
 
         ferrari.printStatus();
         audi.printStatus();
