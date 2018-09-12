@@ -4,12 +4,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Car ferrari = new Car("Ferrari GTO", 200);
+        Car ferrari = new Car("Ferrari GTO");
+        Car audi = new Car("Audi A8");
 
-        Car audi = new Car("Audi A8", 150);
+        ferrari.speed = 200;
 
         ferrari.printStatus();
-
         audi.printStatus();
     }
 }
