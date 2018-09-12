@@ -8,10 +8,16 @@ public class Main {
         Car audi = new Car("Audi A8");
 
         ferrari.accelerate(100);
-        ferrari.decelerate(40);
-        ferrari.decelerate(80);
+        audi.accelerate(30);
 
         ferrari.printStatus();
         audi.printStatus();
+
+        int speed1 = ferrari.getSpeed();
+        int speed2 = audi.getSpeed();
+
+        int difference = speed1 - speed2;
+        System.out.println("difference = " + difference);
+
     }
 }
