@@ -3,13 +3,17 @@ package tech.bts.exercises.classes.cars;
 public class Car {
 
     // Fields / properties
+    // (They should be private)
     private String model;
     private int speed;
+    private int maxSpeed;
 
     // Constructor
-    public Car (String model) {
+    // (It should initialize all the fields)
+    public Car (String model, int maxSpeed) {
         this.model = model;
         this.speed = 0;
+        this.maxSpeed = maxSpeed;
     }
 
     // Methods / functions
@@ -18,8 +22,8 @@ public class Car {
 
         this.speed = this.speed + amount;
 
-        if (this.speed > 300) {
-            this.speed = 300;
+        if (this.speed > this.maxSpeed) {
+            this.speed = this.maxSpeed;
         }
     }
 
@@ -32,10 +36,12 @@ public class Car {
         }
     }
 
+    // This kind of method is called "getter"
     public int getSpeed() {
         return this.speed;
     }
 
+    // This is a special method that is called implicitly sometimes
     public String toString() {
         return this.model + " driving at " + this.speed + "km/h";
     }
